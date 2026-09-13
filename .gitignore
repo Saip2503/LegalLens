@@ -1,27 +1,126 @@
-# Compiled class file
-*.class
+# ============================================================
 
-# Log file
-*.log
+# LegalLens - Kotlin Multiplatform / Compose Multiplatform
 
-# BlueJ files
-*.ctxt
+# ============================================================
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# ---------- IntelliJ IDEA / Android Studio ----------
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+*.iml
+.idea/
+*.ipr
+*.iws
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# ---------- Kotlin ----------
 
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+
+# ---------- Gradle ----------
+
+.gradle/
+**/build/
+!src/**/build/
+
+# Gradle local configuration
+
+local.properties
+
+# ---------- macOS ----------
+
+.DS_Store
+
+# ---------- Android ----------
+
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ---------- Xcode / iOS ----------
+
+xcuserdata/
+
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# ---------- Java / JVM ----------
+
+*.class
+*.jar
+
+# ---------- Node / Web ----------
+
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Generated frontend output
+
+dist/
+out/
+.webpack/
+
+# ---------- Environment / Secrets ----------
+
+.env
+.env.*
+!.env.example
+
+# Local/private configuration
+
+secrets/
+*.pem
+*.key
+
+# ---------- Logs / Temporary files ----------
+
+*.log
+tmp/
+temp/
+
+# ---------- Local databases ----------
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------- IDE / OS temporary files ----------
+
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# ---------- Coverage / Test reports ----------
+
+coverage/
+**/reports/
+
+# ---------- Generated documentation ----------
+
+site/
+
+# ---------- Local AI / model artifacts ----------
+
+models/
+embeddings/
+*.bin
+*.onnx
+*.safetensors
+
+# ---------- Uploads / sensitive local test data ----------
+
+uploads/
+*.pdf
+*.docx
+
+# Keep lightweight sample fixtures explicitly tracked if needed:
+
+# !evaluation/fixtures/*.pdf
+
+# !evaluation/fixtures/*.txt
