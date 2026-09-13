@@ -1,25 +1,21 @@
 package com.legallens.domain
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class LegalDocument(
     val id: String,
     val name: String,
-    val text: String,
-    val type: String,
-    val jurisdiction: String
+    val documentType: DocumentType = DocumentType.UNKNOWN,
+    val jurisdiction: String? = null,
+    val sections: List<DocumentSection> = emptyList()
 )
 
-data class Clause(
-    val title: String,
+@Serializable
+data class DocumentSection(
+    val id: String,
+    val title: String?,
     val content: String,
-    val riskLevel: String,
-    val explanation: String,
-    val sourceSection: String
-)
-
-data class AnalysisResult(
-    val summary: String,
-    val clauses: List<Clause>,
-    val risks: List<String>,
-    val checklist: List<String>,
-    val lawyerQuestions: List<String>
+    val pageNumber: Int? = null,
+    val sectionNumber: String? = null
 )
